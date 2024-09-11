@@ -1,31 +1,47 @@
 
 package javaapplication96;
 
+import java.util.Scanner;
+
 public class Product {
     
-    int id, sold, stock;
-    String name;
-    double price;
-    
-    public void addProducts(int prid, String prname, double prprice, int prsold, int prstock){
+    public void addProduct () {
         
-        this.id = prid;
-        this.sold = prsold; 
-        this.stock = prstock;
-        this.name = prname;      
-        this.price = prprice;
-               
+        Products[] pd = new Products[100];
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter no of Products: ");
+        int nOp = input.nextInt();
+        
+            for (int y = 0; y < nOp; y++) {
+                System.out.printf("Enter details of Products %d\n", y + 1);
+                
+                System.out.print("Product ID: ");
+                int pid = input.nextInt();
+                input.nextLine();
+                
+                System.out.print("Product Name: ");
+                String pname = input.nextLine();
+                
+                System.out.print("Price: ");
+                double pprice = input.nextDouble();
+                
+                System.out.print("Products Sold: ");
+                int psold = input.nextInt();
+                
+                System.out.print("Stocks: ");
+                int pstock = input.nextInt();
+                
+                pd[y] = new Products();
+                pd[y].addProducts(pid, pname, pprice, psold, pstock);
+                
+                
+            }
+        
+        for (int y = 0; y < nOp; y++) {
+            pd[y].viewProducts();
+        }
     }
-    
-    public void viewProducts(){
-        
-        double profit = this.sold * this.price;
-        String status = (this.sold < 1) ? "Out-of-stock":"Avail";
-        double tep = this.stock * this.price;
-        
-        System.out.printf("%-10d %-10s %-10.2f %-10d %-10d %-10.2f %-10s %-10.2f\n",
-        this.id, this.name, this.price, this.sold, this.stock, profit, status, tep);
-    }     
    
     
 }
