@@ -8,19 +8,20 @@ public class JavaApplication96 {
    
     public static void main(String[] args) {
         
-        netPay np = new netPay();
-        np.getPay();
-        
-          Grades gr = new Grades();
-          gr.addGrades (1011, "Mark J", 1.0, 1.0, 1.0, 1.0);
-          gr.viewGrades();
-
-            Products pr = new Products ();
-            pr.addProducts (2011, "chairs", 23, 30, 15);
-            pr.viewProducts ();
-
-            Salary sl = new Salary ();
-            sl.addData();
+//        netPay np = new netPay();
+//        np.getPay();
+//        
+//          Grade gr = new Grade();
+//          gr.addGrade();
+//
+//            Product pd = new Product();
+//            pd.addProduct();
+//
+//            Salary sl = new Salary ();
+//            sl.addData();
+            
+            Account acc = new Account();
+            acc.addAccount();
 
     }
 }
