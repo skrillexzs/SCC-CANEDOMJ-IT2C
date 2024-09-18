@@ -12,7 +12,7 @@ public class JavaApplication96 {
 //        np.getPay();
 //        
 //          Grade gr = new Grade();
-//          gr.addGrade();
+//          gr.genGrade();
 //
 //            Product pd = new Product();
 //            pd.addProduct();
